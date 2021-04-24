@@ -1,7 +1,10 @@
-<p align="center"><a href="#" target="_blank"><?xml version="1.0" encoding="utf-8"?>
+<p align="center"><a href="#" target="_blank">
 <!-- Designed by Vexels.com - 2019 All Rights Reserved - https://vexels.com/terms-and-conditions/  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1200 1200" enable-background="new 0 0 1200 1200" xml:space="preserve">
+<svg 
+    version="1.1" 
+    id="Layer_1" 
+    width="100px"
+    
 <path fill="#253F4C" d="M636.375,987.011c5.706,0.892,11.748,2.933,17.576,2.242c3.871-0.459,7.552-1.824,11.505-2.144
 	c3.814-0.309,7.876-0.419,11.639,0.467c4.336,1.021,8.584,4.699,12.605,0.653c5.427-5.459-4.908-5.582-7.293-9.294
 	c-1.516-2.36-2.001-7.17-2.532-10.004c-3.635-19.387-8.014-38.813-8.027-59.01c-0.005-8.01-0.971-16.708-0.309-24.638
