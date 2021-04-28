@@ -16,11 +16,13 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('user_management.index')" :active="request()->is('admin/user_management')">
-                        {{ __('User Management') }}
-                    </x-nav-link>
-                </div>
+                @if (Auth::user()->isAn('admin'))
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('user_management.index')" :active="request()->is('admin/user_management')">
+                            {{ __('User Management') }}
+                        </x-nav-link>
+                    </div>
+                @endif
             </div>
 
             <!-- Settings Dropdown -->
