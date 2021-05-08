@@ -1,6 +1,15 @@
 <div>
+
     <form method="POST" action="{{ route('user_management.store') }}">
         @csrf
+
+        <select name="roles" id="roles">
+            <option value="">Select a role</option>
+            @foreach ($roles as $role)
+                <option value="{{ $role->name }}">{{ $role->name }}</option>
+            @endforeach
+        </select>
+
 
         <!-- Name -->
         <div>
@@ -35,7 +44,7 @@
                             name="password_confirmation" required />
         </div>
         <div class=" text-right">
-            <x-button class="mt-2 ml-4">
+            <x-button class="mt-2 ml-4" type="submit">
                 <span class="">
                     {{ __('Register') }}
                 </span>

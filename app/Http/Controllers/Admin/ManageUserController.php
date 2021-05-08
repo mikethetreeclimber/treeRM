@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Silber\Bouncer\Bouncer;
 
 class ManageUserController extends Controller
 {
@@ -37,10 +38,14 @@ class ManageUserController extends Controller
      */
     public function store(Request $request)
     {
+
+        // dd($request);
+
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|confirmed|min:8',
+            'roles' => 'required'
         ]);
 
         $user = User::create([
@@ -48,6 +53,8 @@ class ManageUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+
+        $user->assign($request->roles);
 
         // event(new Registered($user));
 
